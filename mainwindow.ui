@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>587</width>
+    <height>323</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/ico/ico.ico</normaloff>:/ico/ico.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow{ 
+	border:2px groove gray;
+	border-radius:10px;
+    padding:2px 4px;
+    background-color: rgba(255, 255, 255,196);
+    border-image: url(bg.jpg)
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTableView" name="tableView">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,128);</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>stopThread()</slot>
+ </slots>
+</ui>
