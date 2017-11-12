@@ -114,10 +114,11 @@ string storagePath="./data.dat";
 LRESULT CALLBACK kb_proc(int code, WPARAM w, LPARAM l)
 {
     PKBDLLHOOKSTRUCT p = (PKBDLLHOOKSTRUCT)l;
-    if (w == WM_KEYDOWN || w==WM_SYSKEYDOWN)
+    if (w == WM_KEYUP || w==WM_SYSKEYUP)
     {
-        //qDebug("%s - vkCode [%04x], scanCode [%04x]\n",
-        //   info, p->vkCode, p->scanCode);
+        /*char* info=NULL;
+        qDebug("%s - vkCode [%04x], scanCode [%04x]\n",
+           info, p->vkCode, p->scanCode);*/
         rwLock.tryLockForWrite();
         record[p->vkCode]++;
         rwLock.unlock();
