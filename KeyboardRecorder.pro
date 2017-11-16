@@ -31,12 +31,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     globals.cpp \
-    keyboardthread.cpp
+    keyboardthread.cpp \
+    configfile.cpp
 
 HEADERS += \
         mainwindow.h \
     globals.h \
-    keyboardthread.h
+    keyboardthread.h \
+    configfile.h
 
 FORMS += \
         mainwindow.ui
