@@ -4,6 +4,7 @@
 #include <QString>
 #include <Windows.h>
 #include <QReadWriteLock>
+#include <configfile.h>
 #include "keyboardthread.h"
 using namespace std;
 /**
@@ -18,6 +19,7 @@ extern HHOOK g_kb_hook;
 extern KeyboardThread* kThread;
 extern QReadWriteLock rwLock;
 extern string storagePath;
+extern ConfigFile config;
 
 LRESULT CALLBACK kb_proc(int code, WPARAM w, LPARAM l);
 void loadStorage();

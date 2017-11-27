@@ -110,6 +110,7 @@ QReadWriteLock rwLock;
 KeyboardThread* kThread=0;
 HHOOK g_kb_hook = 0;
 string storagePath="./data.dat";
+ConfigFile config;
 
 LRESULT CALLBACK kb_proc(int code, WPARAM w, LPARAM l)
 {
